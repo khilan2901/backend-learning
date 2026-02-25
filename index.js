@@ -9,7 +9,7 @@ app.use(express.json());
 
 // --- 1. Connect to MongoDB ---
 const uri = "mongodb://localhost:27017/test"; // local MongoDB, "test" db
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(uri)
   .then(() => console.log("✅ Connected to MongoDB"))
   .catch(err => console.error("❌ Connection error:", err));
 
